@@ -5,7 +5,7 @@ import LoginContainer from '../containers/LoginContainer';
 const App = () =>(
   <BrowserRouter>
     <Switch>
-    <Route exact path='/login' component={LoginContainer} />
+    <Route exact path='/' component={LoginContainer} />
     </Switch>      
   </BrowserRouter>
 );
