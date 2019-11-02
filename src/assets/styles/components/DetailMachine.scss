@@ -18,8 +18,9 @@
 }
 
 .detailMachine-container__infoLine {
-  display: inline-flex;
   margin: 0px 0px;
+  display: grid;
+  grid-template-columns: 30% 70%;
 }
 
 .detailMachine-container__infoLine p {

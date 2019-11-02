@@ -7,13 +7,13 @@ const DetailMachine = () => {
     <section className="detailMachine">
       <div  className="detailMachine-container">
         <section className="detailMachine-container__infoLine">
-          <p>Nombre:</p> <p> VENDING-02-Bogota</p>
+          <div>Nombre:</div> <div> VENDING-02-Bogota</div>
         </section>
         <section className="detailMachine-container__infoLine">
-         <p>Ubicación:</p> <p> Bogota-col: Carrera 10 # 20-19 CC la 20</p>
+         <div>Ubicación:</div> <div> Bogota-col: Carrera 10 # 20-19 CC la 20</div>
         </section>
         <section className="detailMachine-container__infoLine">
-         <p>Descripción:</p> <p>Maquina vending con productos textiles: medias hombre y mujer</p>
+         <div>Descripción:</div> <div>Maquina vending con productos textiles: medias hombre y mujer</div>
         </section>
       </div>
       <div className="detailMachine-seeMore">
