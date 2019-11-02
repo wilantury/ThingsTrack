@@ -5,21 +5,21 @@
   body{
       //display: flex;
       justify-content: center;
-      margin-top: 7%;
+      //margin-top: 7%;
       background-color: #F2F2F2;
   }
   .signin-container{
       font-family: $default-font;
       position: relative;
-      height: 70vh;
-      width: 70%;
+      //height: 70vh;
+      //width: 70%;
       //border: 2px solid blue;
       display: flex;
       justify-content: center;
   }
   .signin-container__welcome{
       width: 50%;
-      height: 70vh;
+      //height: 70vh;
       left: 0%;
   }   
   .signin-container__user-sign{
