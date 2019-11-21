@@ -31,19 +31,20 @@
   font-weight: bolder;
 }
 
-.detailMachine-seeMore {
-  text-align: end;
+.detailMachine-action {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.detailMachine-seeMore p {
+.detailMachine-action p {
   margin: 10px 10px;
 }
 
-.detailMachine-seeMore a {
+.detailMachine-action a {
   text-decoration: none;
   color: #9ad2d9;
 }
 
-.detailMachine-seeMore a:hover {
+.detailMachine-action a:hover {
   text-decoration: underline;
 }

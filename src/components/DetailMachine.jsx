@@ -16,10 +16,13 @@ const DetailMachine = () => {
          <div>Descripción:</div> <div>Maquina vending con productos textiles: medias hombre y mujer</div>
         </section>
       </div>
-      <div className="detailMachine-seeMore">
+      <div className="detailMachine-action">
+        <Link to="/service">
+          <p className="link-detalle-card">Solicitar servicio</p>  
+        </Link>
         <Link to="/machine">
-          <a className="link-detalle-card">Ver detalle</a>  
-        </Link>        
+          <p className="link-detalle-card">Ver detalle</p>  
+        </Link>         
       </div>
     </section>
   );
