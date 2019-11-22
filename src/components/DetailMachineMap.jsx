@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Map, InfoWindow, GoogleApiWrapper, Marker } from 'google-maps-react';
 
 const DetailMachineMap = ({ google , locations}) => { 
 
+  const [windowInfo, setValues] = useState({
+    showingInfoWindow: false,
+    activeMarker: {},
+    selectedPlace: {},
+  })
+
   function onMarkerClick(props, marker, e) {
-    
+    setValues({
+      showingInfoWindow: true,
+      activeMarker: marker,
+      selectedPlace: props,
+    });
   };
   return (
     <Map
@@ -18,11 +28,20 @@ const DetailMachineMap = ({ google , locations}) => {
                 key={item.id}
                 onClick={onMarkerClick}
                 name={item.thing_name}
-                title={'The marker`s title will appear as a tooltip.'}
+                title={item.address}
                 position={{ lat: item.lat_location, lng: item.lng_location }}
               />
             )
-        } 
+        }
+
+        <InfoWindow
+          marker={windowInfo.activeMarker}
+          visible={windowInfo.showingInfoWindow}>
+            <div>
+              <h1>{windowInfo.selectedPlace.name}</h1>
+              <h3>{windowInfo.selectedPlace.title}</h3>
+            </div>
+        </InfoWindow>
     </Map>
   );
 };
