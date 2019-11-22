@@ -2,18 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/components/DetailMachine.scss';
 
-const DetailMachine = () => {
+const DetailMachine = (props) => {
+  const { thing_name, address, description} = props; 
   return(
     <section className="detailMachine">
       <div  className="detailMachine-container">
         <section className="detailMachine-container__infoLine">
-          <div>Nombre:</div> <div> VENDING-02-Bogota</div>
+          <div>Nombre:</div> <div>{thing_name}</div>
         </section>
         <section className="detailMachine-container__infoLine">
-         <div>Ubicación:</div> <div> Bogota-col: Carrera 10 # 20-19 CC la 20</div>
+          <div>Ubicación:</div> <div> {address}</div>
         </section>
         <section className="detailMachine-container__infoLine">
-         <div>Descripción:</div> <div>Maquina vending con productos textiles: medias hombre y mujer</div>
+         <div>Descripción:</div> <div>{description}</div>
         </section>
       </div>
       <div className="detailMachine-action">

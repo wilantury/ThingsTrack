@@ -3,3 +3,12 @@
   flex-direction: row;
   justify-content: space-around;
 }
+
+.header-customer a {
+  text-decoration: none;
+  color: #9ad2d9;
+}
+
+.header-customer a:hover {
+  text-decoration: underline;
+}

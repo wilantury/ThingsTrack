@@ -1,22 +1,28 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import ListMachineCards from '../components/ListMachineCards';
 import DetailMachine from '../components/DetailMachine';
 import HeaderCustomer from '../components/HeaderCustomer';
 
-const CustomerContainer = () => {
+const CustomerContainer = ({ customer_things }) => {
   return (
     <>
       <ListMachineCards>
           <HeaderCustomer />
-          <DetailMachine />
-          <DetailMachine />
-          <DetailMachine />
-          <DetailMachine />  
-          <DetailMachine />
-          <DetailMachine />       
+          {customer_things.map( item => 
+            <DetailMachine key={item.id} {...item}/> 
+          )}  
       </ListMachineCards>
     </>
   );
 };
 
-export default CustomerContainer;
+const mapStateToProps = (state) => {
+  return {
+    customer_things: state.customer_things,
+  };
+};
+
+//export default CustomerContainer;
+//export default connect(props, dispatch - actions)
+export default connect(mapStateToProps, null)(CustomerContainer);
